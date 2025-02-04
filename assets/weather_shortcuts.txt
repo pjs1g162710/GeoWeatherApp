@@ -1,0 +1,2 @@
+This file contains weather shortcuts to display with the code
+
