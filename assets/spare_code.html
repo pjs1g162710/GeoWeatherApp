@@ -3,10 +3,27 @@
 <!--html side-->
 
 <!--Search field-->
+<div class="widget">
+    <h2>Enter location</h2>
+    <input type="text" id="searchTerm" placeholder="Enter location..." />
+    <button id="searchButton">Search</button>
+</div>
 
+<script>
+//<!--  select the searchButton Button -->
+var searchButton = document.getElementById("searchButton");
+
+//<!--Add the event listener-->
+searchButton.addEventListener("click", search);
+
+function search() {
+  // 4. use the value property of the searchInput to get the search term
+  var term = searchTerm.value;
+}
+
+</script>
 
 
 <!--Button-->
-<button id="clicktest">Search </button>
+<button id="clicktest">Search</button>
 
-<!---->
