@@ -1,6 +1,21 @@
-const cityEle =document.getElementById("txtCity");
+
+//<!--  select the searchButton Button -->
+var searchButton = document.getElementById("searchButton");
+
+//<!--Add the event listener to trigger running the functions-->
+searchButton.addEventListener("btnClick", btnClick);
+
+function search() {
+  // 4. use the value property of the searchInput to get the search term
+  var term = searchTerm.value;
+}
+
+const cityEle =document.getElementById("txtCity"); //This should return the input location e.g. 'London'
 const API_Key="0bfa5f811840d225cb99d0642abdd3ee";
 let weatherURlByCity;
+
+
+
 
 function btnClick(){
     debugger
