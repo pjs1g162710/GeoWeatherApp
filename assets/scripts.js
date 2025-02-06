@@ -48,5 +48,27 @@ let lon = data[0].lon;
 //  - Example API call:  
 //     `https://api.openweathermap.org/data/2.5/weather?lat=51.5074&lon=-0.1278&appid=YOUR_API_KEY`
 
-function getWeather(data);
+function getWeather(data); {
 let weatherDataURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_Key}`;
+
+fetch(weatherDataURL)
+        .then(respone=>respone.json())
+        .then(data=>{displayDataWeather(data)})
+        .catch((error) => console.error("Fetch error:", error));
+}
+
+function displayDataWeather(data)
+{
+    debugger;
+    console.log(data);
+}
+
+
+
+//**Parse the JSON Response**:
+
+//- Extract the following information from the JSON response:
+// `name`: The location name.
+// // `main.temp`: The temperature (you may need to convert it to Celsius/Fahrenheit depending on your preference).
+// `weather[0].description`: A short description of the weather conditions.
+
