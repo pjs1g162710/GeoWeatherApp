@@ -85,7 +85,7 @@ let temp = data[0].main.temp; //this is in farenheit
 //the opposite is (32°F − 32) × 5/9 = 0°C
 
 function convertFtoC(degC) {
-    let degC = temp * (5 / 9) - 32;
+    let degC = (temp- 32) * (5 / 9) ;
     return degC;
   }
   
