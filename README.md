@@ -54,27 +54,27 @@ As a user, I want to enter a location into the Weather Dashboard, and I want the
    - Example API call:  
      `http://api.openweathermap.org/geo/1.0/direct?q=London&appid=YOUR_API_KEY`
 
-3. **Fetch Weather Data**:
+3. **Fetch Weather Data**: [Pip drafted, not tested]
 
    - After getting the coordinates, use the latitude and longitude to fetch weather data from the OpenWeatherMap Weather API.
    - Example API call:  
      `https://api.openweathermap.org/data/2.5/weather?lat=51.5074&lon=-0.1278&appid=YOUR_API_KEY`
 
-4. **Parse the JSON Response**:
+4. **Parse the JSON Response**: [Pip drafted,not tested]
 
    - Extract the following information from the JSON response:
      - `name`: The location name.
      - `main.temp`: The temperature (you may need to convert it to Celsius/Fahrenheit depending on your preference).
      - `weather[0].description`: A short description of the weather conditions.
 
-5. **Update the Dashboard**:
+5. **Update the Dashboard**: [Pip and Sireesha done console logs]
 
    - Use DOM manipulation techniques to update the Weather Dashboard UI with the selected data.
    - Ensure that the weather information (location, temperature, and description) is displayed clearly and formatted properly.
 
-6. **Handle Errors Gracefully**:
+6. **Handle Errors Gracefully**: [Sireesha done this in her code, Pip has not]
    - Add error handling in case the user enters an invalid location or the API request fails.
-   - Display appropriate error messages to inform the user of any issues.
+   - Display appropriate error messages to inform the user of any issues.  [Need to add this onto front end]
 
 ## Additional Resources
 
