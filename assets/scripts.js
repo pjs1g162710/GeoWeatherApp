@@ -23,6 +23,7 @@ function getLatLongByCity(weatherURlByCity)
       
 }
 
+//code past this point is not yet tested by Pip
 function getByLatLong(data)
 {
    let weatherURlByLonLat=`https://api.openweathermap.org/data/2.5/weather?lat=${data[0].lat}&lon=${data[0].lon}&appid=${API_Key}`;
@@ -63,8 +64,6 @@ function displayDataWeather(data)
     console.log(data);
 }
 
-
-
 //**Parse the JSON Response**:
 
 //- Extract the following information from the JSON response:
@@ -72,3 +71,29 @@ function displayDataWeather(data)
 // // `main.temp`: The temperature (you may need to convert it to Celsius/Fahrenheit depending on your preference).
 // `weather[0].description`: A short description of the weather conditions.
 
+
+let loc = data[0].name;
+
+// The JSON output file format is here: https://openweathermap.org/current
+
+
+let temp = data[0].main.temp; //this is in farenheit
+
+//convert farenheit to celsius (code example adapted from here: https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-convert-celsius-to-fahrenheit/16806)
+
+//The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.
+//the opposite is (32°F − 32) × 5/9 = 0°C
+
+function convertFtoC(degC) {
+    let degC = temp * (5 / 9) - 32;
+    return degC;
+  }
+  
+  // Change the inputs below to test your code
+  convertCtoF(30);
+
+let desc = data[0].weather.description;
+
+console.log(loc);
+console.log(degC);
+console.log(desc);

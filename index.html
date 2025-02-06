@@ -12,12 +12,28 @@
 
 </head>
 <body>
-<h1> Enter Location data</h1>
-    <button id="getlatlon"> Submit Location</button>
 
-<h1> Get weather map</h1>
-<button id="getWeathermap"> View Weather Map</button>
-
+        <h2>Enter location</h2>
+        <input type="text" id="txtCity" placeholder="Enter location..." />
+        <button id="searchButton">Search</button>
+  
+    
+    <script>
+    //<!--  select the searchButton Button -->
+    var searchButton = document.getElementById("searchButton");
+    
+    //<!--Add the event listener-->
+    searchButton.addEventListener("btnClick", search);
+    
+    function search() {
+      // 4. use the value property of the searchInput to get the search term
+      var term = searchTerm.value;
+    }
+    
+    </script>
+    
+    
+    <!--Button-->
 
 <script src="./assets/js/script.js"></script>
 </body>
