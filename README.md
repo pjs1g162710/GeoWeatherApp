@@ -43,12 +43,12 @@ As a user, I want to enter a location into the Weather Dashboard, and I want the
 
 ## Steps to Complete the Exercise
 
-1. **Setup Your OpenWeatherMap API Key**:
+1. **Setup Your OpenWeatherMap API Key** {Sireesha done}:
 
    - Sign up for a free API key at [openweathermap.org](https://openweathermap.org/).
    - Use this key in your API calls for both geocoding and weather data retrieval.
 
-2. **Fetch Location Coordinates**:
+2. **Fetch Location Coordinates**: [Sireesha done]
 
    - Use the OpenWeatherMap Geocoding API to convert the user-entered location into latitude and longitude.
    - Example API call:  
