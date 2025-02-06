@@ -3,16 +3,16 @@
 var searchButton = document.getElementById("searchButton");
 
 //<!--Add the event listener to trigger running the functions-->
-searchButton.addEventListener("btnClick", btnClick);
+searchButton.addEventListener("click", btnClick);
 
 const cityEle = document.getElementById("txtCity"); //This should return the input location e.g. 'London'
 const API_Key = "0bfa5f811840d225cb99d0642abdd3ee";
 let weatherURlByCity = "";
 
-function convertFtoC(degF) {
-  let degC = (degF - 32) * (5 / 9);
-  return degC;
-}
+function convertKtoC(degK) {
+    let degC = degK - 273.15;
+    return degC.toFixed(2); // Round to 2 decimal places
+  }
 
 function btnClick() {
   if (!cityEle.value) {
@@ -44,13 +44,13 @@ function getByLatLong(data) {
 function displayByLatLong(data) {
   console.log(data);
 
-  //let loc = data[0].name;
-  let degF = data[0].main.temp;
-  let celsius = convertFtoC(degF);
+  let loc = data.name;
+  let degF = data.main.temp;
+  let celsius = convertKtoC(degF);
 
-  let desc = data[0].weather.description;
+ let desc = data[0].weather.description;
 
-  //document.getElementById("city").innerHTML = loc;
+ // document.getElementById("city").innerHTML = loc;
   document.getElementById("temp").innerHTML = celsius;
   document.getElementById("desc").innerHTML = desc;
 }
